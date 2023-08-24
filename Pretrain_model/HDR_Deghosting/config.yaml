@@ -1,0 +1,34 @@
+name: MGDN
+use_cuda: True
+cuda_idx: 0
+
+datasets:
+  train_data: Null
+  test_data: "./Dataset/Deghosting/test_data.txt"
+
+TrainSetting:
+  LR: 1e-4
+  Seed: 225
+  Batchsize: 4
+  # force 128*128
+  Patchsize: 128
+  Epochs: 50000
+  Momentum: 0.9
+  Save_model_interval: 1
+  Loss: mapped_L1
+
+Networktype: "KPN"
+NetworkSetting: 
+  Pretrain: Null
+  ResumePoint: 10000
+  nChannel: 6
+  Winsize: 8
+  Kernel_nums: 4
+  Ndenselayers: 0
+  Temperature: 34
+  Mid_channel: 16
+  Width: 60
+
+Saveset:
+  Trained_model_dir: Null
+  Result_dir: Null

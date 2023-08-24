@@ -1,0 +1,4 @@
+% the test data is maded in H5 format for a faster inference
+./Dataset/Deghosting/001.h5
+./Dataset/Deghosting/002.h5
+...
